@@ -138,3 +138,11 @@ Inpatient: https://data.world/ie-nat-purchase-fund/a8352e39-3fbb-4b06-9921-96e54
   - PAS system upgrade in Nenagh Hospital resulted in no file received for October 2016 publication.
 
 
+![image](https://github.com/drsNdamah/Healthcare-EIS-PowerBi/assets/111310572/af36b053-3476-40c8-b30c-fc8756a53dd2)
+
+
+#
+Monthly Trend Analysis:
+
+![Trend analysis](https://github.com/drsNdamah/Healthcare-EIS-PowerBi/assets/111310572/96496d11-9831-409e-9692-7679dd826936)
+
