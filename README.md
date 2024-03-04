@@ -1,21 +1,18 @@
 
-# Healthcare EIS with Power Bi
+## **Healthcare EIS with Power Bi**
 
-In this Power BI project, we use 9 fail-proof business analysis/intelligence processes to craft a top-notch dashboard 
-using NTPF data from Group Hospital, which is essentially an aggregation of Inpatient, Day Case, and Outpatient waiting
-lists for comprehensive insights.
+In this Power BI project, I follow 9 proven business analysis or intelligence processes to craft a top-notch Health EIS dashboard using NTPF data from Group Hospital, which is essentially an aggregation of Inpatient, Day Case, and Outpatient waiting lists for comprehensive insights.
 
 
 
-### Dashboard Link: 
-* The initial report was published to this power bi workspace and available on request, however, a copy of the dashboard
-    is included in the project repository.
 
-    [https://app.powerbi.com/groups/me/reports/789d1154-8dd7-4307-b6b3-84e6251ed2f3/ReportSection?experience=power-bi]()
+### **Dashboard Links:**
+The initial report was published to my personal power bi workspace and available on request, however, a copy of the dashboard (.pbix) is included in the project repository. You can request access to the report via:
 
-#
+[https://app.powerbi.com/groups/me/reports/789d1154-8dd7-4307-b6b3-84e6251ed2f3/ReportSection?experience=power-bi]()
 
-### Data Sources and Information:
+
+### **Data Sources and Information:**
 The data used in this project was taken from:
 
 * Outpatient: [https://data.world/ie-nat-purchase-fund/b497f818-a078-449e-b992-2828fe814230]()
@@ -23,7 +20,8 @@ The data used in this project was taken from:
 * Inpatient: [https://data.world/ie-nat-purchase-fund/a8352e39-3fbb-4b06-9921-96e54e0be187]()
 
 
-### **Data Dictionary**
+#### **Data Dictionary:**
+The following shows the description of the data used in this project by column name and datatype:
 
 | Column Name          | Type    |
 |----------------------|---------|
@@ -39,153 +37,118 @@ The data used in this project was taken from:
 | time_bands           | string  |
 | count                | integer |
 
+#### **Summary Notes for Patient Waiting Lists:**
 
-
-### **Summary Notes for Patient Waiting Lists:**
-
-##### Outpatient
-
-1. Responsibility and Reporting:
-   - The National Treatment Purchase Fund (NTPF) manages the collection, collation, and validation of Inpatient, Day Case, and Outpatient waiting lists.
-   - The Outpatient (OP) Waiting List report focuses on the total number of patients waiting for a first appointment at a consultant-led Outpatient clinic, categorized across various time bands.
-2. Confidentiality Measures:
-   - Numbers under a 'Small Volume' heading aggregate counts where there are fewer than 5 patients waiting in a particular specialty/hospital for confidentiality.
-3. Data Classification:
-   - Adult/Child classification is based on each hospital's designation, with specific criteria for Children's Hospitals, Adult-only hospitals, and mixed Adult/Child hospitals.
-4. Data Collection and Publication:
-   - NTPF captures a snapshot of the number of patients waiting in each hospital, publishing the aggregated data monthly on their website.
-5. Responsibility and Quality Assurance:
-   - Boards and management of individual public hospitals are responsible for the accuracy and integrity of patient data submitted to NTPF.
-   - Continuous collaboration between NTPF and individual hospitals addresses ongoing work on data quality, and technical and administrative issues are resolved as they arise.
-6. Notes for Consideration:
-   - Kilcreene Orthopaedic - OP waiting list included with St Luke’s Hospital Kilkenny.
-   - Tallaght Paediatrics and Adults figures are shown separately from July 2015.
-   - PAS system upgrade impacted data submission from University Hospital Limerick in July 2015, resolved by September 2015.
-   - Rotunda hospital included in reporting from January 2018.
-   - PAS system upgrade in Nenagh Hospital resulted in no file received for October 2016 publication.
-
-##### Inpatient and Day Care
-
-1. **Responsibility and Reporting:**
-   - The National Treatment Purchase Fund (NTPF) manages the collection, collation, and validation of Inpatient, Day Case, and Outpatient waiting lists.
-   - The Inpatient and Day Case (IPDC) Waiting List report details the total number of patients awaiting Inpatient and Day Case treatment across various time bands within each Specialty.
-2. **Confidentiality Measures:**
-   - Numbers under a 'Small Volume' heading aggregate counts where there are fewer than 5 patients waiting in a particular specialty/hospital to preserve confidentiality.
-3. **Data Classification:**
-   - Adult/Child classification is based on each hospital's designation, with specific criteria for Children's Hospitals, Adult-only hospitals, and mixed Adult/Child hospitals.
-4. **Data Collection and Publication:**
-   - NTPF captures a snapshot of the number of patients waiting in each hospital, publishing the aggregated data monthly on their website.
-5. **Responsibility and Quality Assurance:**
-   - Boards and management of individual public hospitals are responsible for the accuracy and integrity of patient data submitted to NTPF.
-   - Continuous collaboration between NTPF and individual hospitals addresses ongoing work on data quality, and technical and administrative issues are resolved as they arise.
-6. **Notes for Consideration:**
-   - Time band categories on reports were standardized from January 2018, aligning with DoH/HSE clearance targets for waiting lists.
-   - Specific updates for hospitals like St. Michaels, Dun Laoghaire, and Tallaght Paediatrics and Adults figures are provided.
-   - System upgrades in University Hospital Limerick, St John's Hospital Limerick, and Nenagh Hospital affected data submission during certain periods.
-#
-
-## Problem Statement
-The current issue revolves around inefficiencies in maintaining and extracting insights from patient waiting list data
-at Group Hospital. Currently, there is a lack of a comprehensive and user-friendly system for monitoring real-time 
-waiting list statuses, and available specialties, as well as the capacity for analyzing historical patterns in 
-inpatient and outpatient categories and doing thorough specialty-level and age profile assessments. Stakeholders 
-suffer from an absence of a centralized and visually intuitive solution, which limits their capacity to make informed 
-choices promptly. 
-
-#
-
-
-### The 9-BA/BI Steps For Dashboard Development
-
+The National Treatment Purchase Fund (NTPF) oversees the management of Inpatient, Day Case, and Outpatient waiting lists, focusing on the collection and validation of patient data. For Outpatient (OP) Waiting Lists, the report highlights the total number of patients awaiting their first appointment at a consultant-led clinic, with specific confidentiality measures for small volume counts. Adult/Child classification is based on hospital designations, and the data, captured monthly, is the responsibility of individual public hospitals, ensuring accuracy and integrity. Notes for consideration include details on specific hospitals' data inclusion/exclusion, system upgrades affecting data submission, and standardization of time band categories. The Inpatient and Day Case (IPDC) Waiting List report follows a similar structure, emphasizing confidentiality, data classification, and responsibility for accurate reporting, with additional notes on standardized time band categories and updates for specific hospitals impacted by system upgrades.
+### **Problem Statement:**
+The current issue revolves around inefficiencies in maintaining and extracting insights from patient waiting list data at Group Hospital. Currently, there is a lack of a comprehensive and user-friendly system for monitoring real-time waiting list statuses, and available specialties, as well as the capacity for analyzing historical patterns in inpatient and outpatient categories and doing thorough specialty-level and age profile assessments. Stakeholders suffer from an absence of a centralized and visually intuitive solution, which limits their capacity to make informed choices promptly. 
+### **The 9-BA/BI Steps For Dashboard Development**
 To address these challenges, the project will follow a meticulous nine-step BA/BI dashboard/report development process, including:
 
-* requirement gathering, 
-* data collection,
-* data transformation and modeling,
-* data visualization blueprint,
-* dashboard layout and design,
-* interactivity and navigation,
-* testing, 
-* sharing,
-* maintenance and refresh.
-
-
-### Steps/Processes in Details
-#### 1. Requirement gathering
+ * requirement gathering, 
+ * data collection,
+ * data transformation and modeling,
+ * data visualization blueprint,
+ * dashboard layout and design,
+ * interactivity and navigation,
+ * testing, 
+ * sharing,
+ * maintenance and refresh.
+#### **1. Requirement Gathering**
 This is the most important step of dashboard creation. The effectiveness of your dashboard/report is determined by its 
-capacity to address the specific business need/problem, not by its visual attractiveness. So, by gathering the needs for
-your dashboard, you may make better use of your time by producing what is required.
-This article describes four consecutive steps for gathering the requirements for your dashboard/reports, so you can offer
-value to your stakeholders.
-
-
+capacity to address the specific business need/problem, not by its visual attractiveness. 
+Under requirement gathering, there are 4 sequential steps for gathering the requirements for your dashboard/reports, so you can offer value to your stakeholders.
 
 - **Identify Stakeholders:**
-
-Determine the primary stakeholders and establish a point of contact, such as domain experts or leaders who will utilize the dashboard.
-Setting a point of contact at the outset is crucial for seeking explanations and clarifications as needed. For this 
-particular project, the stakeholders are Hospital Administrators, Department Heads, Medical Staff, Data Analysts/IT 
-Department, Quality Assurance Team, Patients, Government Health Agencies, and Hospital Board Members.
+    Determine the primary stakeholders and establish a point of contact, such as domain experts or leaders who will utilize the dashboard. Setting a point of contact at the outset is crucial for seeking explanations and clarifications as needed. For this particular project, we identify the stakeholders as Hospital Administrators, Department Heads, Medical Staff, Data Analysts/IT Department, Quality Assurance Team, Patients, Government Health Agencies, and Hospital Board Members
 
 - **Understand Business Objectives:**
+    the next step is to engage in meetings and calls with stakeholders to obtain a comprehensive outline of goals for the entire endeavor. his will include setting up meetings via skype, google meet, team meeting etc depending on the type of organization and the tools they use for collaboration. You have to ask open-ended questions during these discussions aids in gaining deeper insights into the data and understanding how the dashboard aligns with specific business goals. From the problem statement, we identify 3 key objectives:
 
-Having identified your stakeholders, the next step is to engage in meetings and calls with stakeholders to obtain a
-comprehensive outline of goals for the entire endeavor. This will include setting up meetings via skype, google meet, team
-meeting etc depending on the type of organization and the tools they use for collaboration. You have to ask open-ended 
-questions during these discussions aids in gaining deeper insights into the data and understanding how the dashboard 
-aligns with specific business goals. From the problem statement, we identify 3 key objectives:
- * Track the current status of patients' waiting lists.
- * Analyze historical monthly trends for inpatient and outpatient categories.
- * Perform detailed specialty-level and age profile analyses.
+    * Track the current status of patients' waiting lists.
+    * Analyze historical monthly trends for inpatient and      outpatient categories.
+    * Perform detailed specialty-level and age profile analyses.
+
+- **Understand Business Objectives:**
+    Having identified your stakeholders, the next step is to engage in meetings and calls with stakeholders to obtain a
+    comprehensive outline of goals for the entire endeavor. This will include setting up meetings via skype, google meet, team
+    meeting etc depending on the type of organization and the tools they use for collaboration. You have to ask open-ended 
+    questions during these discussions aids in gaining deeper insights into the data and understanding how the dashboard 
+    aligns with specific business goals. From the problem statement, we identify **3 key objectives:**
+
+    * Track the current status of patients' waiting lists.
+    * Analyze historical monthly trends for inpatient and outpatient categories.
+    * Perform detailed specialty-level and age profile analyses.
 
 - **High-Level Data Study:**
-
-Conduct a high-level overview of the data, focusing on key aspects without delving into detailed analysis.
-Topics to cover include data source, column descriptions, data types, volume, frequency, and data quality (identifying missing values or anomalies).
+    Conduct a high-level overview of the data, focusing on key aspects without delving into detailed analysis. Topics to cover include data source, column descriptions, data types, volume, frequency, and data quality (identifying missing values or anomalies).
 
 - **Define Scope:**
-
-Engage in discussions with stakeholders to define the scope, discussing key metrics, KPIs, and deployment timelines.
-Document calculations, timeframes, and scope details during this stage to set clear expectations and avoid future disagreements.
+    Engage in discussions with stakeholders to define the scope, discussing key metrics, KPIs, and deployment timelines.
+    Document calculations, timeframes, and scope details during this stage to set clear expectations and avoid future disagreements.
 
 ###### TIP: Follow 80-20 Rule:
 When estimating your ETA, as a best practice, adhere to the 80-20 rule, keeping a 20% buffer while finalizing deadlines.
 This ensures a margin for over-delivering beyond standard commitments and mitigates the risk of falling short after an initially extraordinary pitch.
 
 
+#### **2. Data Collection**
+Data collection is a crucial step in creating a Power BI dashboard for meaningful analysis. During this phase, information is gathered from diverse sources and brought into the Power BI platform. With over 200 data connectors available, choosing the right one is key. In this example, the focus is on using the folder connector, where a central folder holds all the needed files for refreshing the dashboard. The chosen data source involves separate files for inpatient and outpatient data in yearly folders. Ensuring uniformity in columns and headers across files is vital. The process includes clicking "Get Data," selecting the folder connector, specifying the folder path, and previewing the data. Users can then choose to combine and load the data for deeper analysis.
+#### **3. Data Transformation and Modeling**
+Now that the inpatient and outpatient data is loaded into Power BI, the next step is to apply transformations. By clicking on the small icon and selecting "Transform Data," the Power Query Editor is opened. In this editor, the tables loaded into Power BI are displayed on the left, and the user can review and manipulate the data. Checking data types and ensuring consistency is crucial, and any transformation steps are recorded in the applied step section on the right, allowing for easy tracking and correction of mistakes. The demonstration emphasizes checking and adjusting data types, reviewing columns, and verifying row counts for both inpatient and outpatient data.
+#### **4. Data Visualization Blueprint**
+The team is now focusing on creating a data visualization blueprint for the dashboard. After gaining a detailed understanding of the data through transformations and modeling, the team collaborates in a brainstorming session to finalize the dashboard's structure. Two main pages are planned: 
+- **a summary page** and a 
+- **detailed granular level page**. 
+The summary page will feature visuals like the total waiting list for the current month, a comparison with the previous year, and various average waiting list trends. Special attention will be given to specialties, including both average and median metrics to address outliers. Essential filters for month, case type, and specialty will be incorporated. The detailed page is designed for in-depth data exploration, focusing on advanced visualization features for an improved user experience. This blueprint guides the direction for dashboard development, setting the stage for the next phase of actually designing the dashboard.
+#### **5. Dashboard Layout and Design**
+In the design phase, the focus shifts to building the charts outlined in the data visualization blueprint. Before starting the design process, it's recommended to enable two options in the view tab: grid lines and snap to grid, aiding in better alignment of objects. **_The top-left section requires two numbers_**, showcasing the current month wait list versus the same month of the previous year. Utilizing DAX, a measure named "latest month wait list" is created to dynamically display the current month's wait list. **Note:  I added + 0 to the calculation so that if the 'Archive_Date' filter is set to a date value outside of the range, it will simple return 0**. See DAX code below:
 
-### Data Collection
-### Data Transformation and Modeling
-### Data Visualization Blueprint
-### Dashboard Layout and Design
-### Interactivity and Navigation
-### Testing
-### Sharing
-### Maintenance and Refresh.
-
-
-#
-Title and KPI Visuals
-![image](https://github.com/drsNdamah/Healthcare-EIS-PowerBi/assets/111310572/eba8a737-caaa-4577-b528-5b02c768adf9)
-
-#
-Key Performance Indicators (Average/Median WaitList, Age Groups, and Specialty Name):
-
-![image](https://github.com/drsNdamah/Healthcare-EIS-PowerBi/assets/111310572/af36b053-3476-40c8-b30c-fc8756a53dd2)
+![current and previous year to date](https://github.com/drsNdamah/About-Me/assets/111310572/6fc2507a-5af6-4e2b-a25c-4d5e370ffb19)
 
 
-#
-Monthly Trend Analysis:
+```
+Latest Month Wait List = CALCULATE(SUM(All_Data[Total]), All_Data[Archive_Date] = MAX(All_Data[Archive_Date]))+0
 
-![Trend analysis](https://github.com/drsNdamah/Healthcare-EIS-PowerBi/assets/111310572/96496d11-9831-409e-9692-7679dd826936)
+```
 
-#
-Detailed Analysis:
+Similarly, another measure, "py latest month wait list," is crafted to represent the previous year's same-month wait list.
+
+```
+PY Latest Month Wait List = CALCULATE(SUM(All_Data[Total]), All_Data[Archive_Date] = EDATE(MAX(All_Data[Archive_Date]), -12))+0
+```
+
+Moving to the middle section, three different charts are planned: a donut chart for case types, a stacked column chart for age profile and time band relationship, and a matrix displaying top 5 specialties with average and median wait list metrics. To toggle between average and median metrics, a mechanism is introduced using a slicer. DAX measures "average wait list" and "median wait list" are created to dynamically switch between these metrics.
+
+![middle](https://github.com/drsNdamah/About-Me/assets/111310572/d838f01b-c2bc-4daf-b463-dbc689cb0e8a)
+
+For Average/Median, I used the following DAX code:
+- Average
+
+```
+Average Waiting List = AVERAGE(All_Data[Total])
+```
+
+- Median
+```
+Median Waiting List = MEDIAN(All_Data[Total])
+```
+- Switch Statement to toggle between the two metrics
+```
+Avg/Med Wait List = SWITCH(VALUES('Calculation Method'[Calc Method]), "Average", [Average Waiting List], "Median", [Median Waiting List])
+```
+Of course, the switch statement above indicates that I need to create table called 'Calculation Method' to facilitate the switch:
+
+- Calculation Method Table
+
+![Calc Table](https://github.com/drsNdamah/About-Me/assets/111310572/9a24bfc0-773a-4e1d-a5f5-7c6efc2b0931)
+
+
+The bottom section includes two line charts for inpatient and outpatient cases. The design also incorporates filters for month, case type, and specialty, enhancing the dashboard's overall functionality. The second page, named "detail," is created for more granular exploration. The design elements from the summary page are copied, including filters, ensuring synchronization between the two pages. The detailed view is designed using a matrix for better data exploration.
+
+![trendz](https://github.com/drsNdamah/About-Me/assets/111310572/89245981-e1ca-42bb-badd-7ac12af89dac)
+
+
+- Detailed Page
 
 ![image](https://github.com/drsNdamah/Healthcare-EIS-PowerBi/assets/111310572/24b0512d-4519-426e-b008-9c156df7e8e6)
-
-
-#
-
-
-
