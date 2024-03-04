@@ -102,13 +102,13 @@ The team is now focusing on creating a data visualization blueprint for the dash
 - **detailed granular level page**. 
 The summary page will feature visuals like the total waiting list for the current month, a comparison with the previous year, and various average waiting list trends. Special attention will be given to specialties, including both average and median metrics to address outliers. Essential filters for month, case type, and specialty will be incorporated. The detailed page is designed for in-depth data exploration, focusing on advanced visualization features for an improved user experience. This blueprint guides the direction for dashboard development, setting the stage for the next phase of actually designing the dashboard.
 #### **5. Dashboard Layout and Design**
-In the design phase, the focus shifts to building the charts outlined in the data visualization blueprint. Before starting the design process, it's recommended to enable two options in the view tab: grid lines and snap to grid, aiding in better alignment of objects. **_The top-left section requires two numbers_**, showcasing the current month wait list versus the same month of the previous year. Utilizing DAX, a measure named "latest month wait list" is created to dynamically display the current month's wait list. **Note:  I added + 0 to the calculation so that if the 'Archive_Date' filter is set to a date value outside of the range, it will simple return 0**. See DAX code below:
+In the design phase, the focus shifts to building the charts outlined in the data visualization blueprint. Before starting the design process, it's recommended to enable two options in the view tab: grid lines and snap to grid, aiding in better alignment of objects. **_The top-left section requires two numbers_**, showcasing the current month wait list versus the same month of the previous year. Utilizing DAX, a measure named "latest month wait list" is created to dynamically display the current month's wait list. See DAX code below:
 
 ![current and previous year to date](https://github.com/drsNdamah/About-Me/assets/111310572/6fc2507a-5af6-4e2b-a25c-4d5e370ffb19)
 
 
 ```
-Latest Month Wait List = CALCULATE(SUM(All_Data[Total]), All_Data[Archive_Date] = MAX(All_Data[Archive_Date]))+0
+Latest Month Wait List = CALCULATE(SUM(All_Data[Total]), All_Data[Archive_Date] = MAX(All_Data[Archive_Date]))
 
 ```
 
@@ -152,3 +152,37 @@ The bottom section includes two line charts for inpatient and outpatient cases. 
 - Detailed Page
 
 ![image](https://github.com/drsNdamah/Healthcare-EIS-PowerBi/assets/111310572/24b0512d-4519-426e-b008-9c156df7e8e6)
+
+#### **6/7. Adding Interactivity / Navigation and Testing**
+In this phase of the project, the focus is on enhancing the dashboard's interactivity, navigation, and addressing potential issues. To begin, filters are refined to handle scenarios where data might be missing, providing a more seamless user experience. For instance, when changing date filters, steps are taken to display zero instead of a blank, ensuring a cleaner appearance. 
+I added + 0 to the calculation so that if the 'Archive_Date' filter is set to a date value outside of the range, it will simple return 0.
+
+```
+Latest Month Wait List = CALCULATE(SUM(All_Data[Total]), All_Data[Archive_Date] = MAX(All_Data[Archive_Date]))+0
+```
+
+```
+PY Latest Month Wait List = CALCULATE(SUM(All_Data[Total]), All_Data[Archive_Date] = EDATE(MAX(All_Data[Archive_Date]), -12))+0
+```
+
+To manage interactions between filters and charts, I use 'manage relationship' under the Modeling tab to ensure that I selectively enable or disable interactions. This ensures that specific charts remain unaffected by certain filter changes, optimizing the user's understanding of the data.
+
+- Controlliing How Visuals Display When There is no Data
+Addressing the visibility issue when selecting certain specialties, a dynamic "no data" text is introduced to indicate the absence of data for a particular selection. This involves creating new measures and using DAX formulas to display relevant messages. At the moment, when you select certain with values in the specialty name slicer, some of the visuals show blank or empty. This has been fixed with the DAX below:
+
+![image](https://github.com/drsNdamah/About-Me/assets/111310572/a7f8723b-884d-4f41-8830-07716ea47052)
+
+
+- for the left visual
+```
+NoDataLeft = if(ISBLANK(CALCULATE(SUM(All_Data[Total]), All_Data[Case_Type]<> "Outpatient")), "No data for selected criteria", "")
+```
+- for the right visual
+
+```
+NoDataRight = if(ISBLANK(CALCULATE(SUM(All_Data[Total]), All_Data[Case_Type] = "Outpatient")), "No data for selected criteria", "")
+```
+
+- After this the visual looks like this:
+![image](https://github.com/drsNdamah/About-Me/assets/111310572/994182a4-4b81-4cbf-b1ba-3c6b39a6bb74)
+
