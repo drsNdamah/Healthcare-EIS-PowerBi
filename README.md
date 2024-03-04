@@ -186,3 +186,11 @@ NoDataRight = if(ISBLANK(CALCULATE(SUM(All_Data[Total]), All_Data[Case_Type] = "
 - After this the visual looks like this:
 ![image](https://github.com/drsNdamah/About-Me/assets/111310572/994182a4-4b81-4cbf-b1ba-3c6b39a6bb74)
 
+
+#### **8/9 Sharing and Refreshing**
+The next phase is to share the report and make it accessible to the right people. It is important that you also take into account the level of access for the different Power BI dashboards/reports. In Power Bi, you can use RLS to filter users' level of access.
+
+The final phase is refreshing, you can schedule to dashboard to autorefresh at specified times in Power Bi Services. Or on your Power Bi desktop, you can select on Refresh in the Home tab. You also keep an eye on the report, for update issues, complaints, and new changes that users require to the report.
+
+-- The End, Bye -
+
