@@ -9,7 +9,7 @@ In this Power BI project, I follow 9 proven business analysis or intelligence pr
 ### **Dashboard Links:**
 View the initial report via the link below:
 
-[https://app.powerbi.com/view?r=eyJrIjoiMGEyMDVmMjItMTliMi00MDhmLTk2YTAtNzYyOTA5YWE3YjFjIiwidCI6IjJiNDA4NGFjLTBmMzMtNGU1YS1hYTY0LTdkYmNmN2QxMjU2ZiIsImMiOjl9]()
+[Power Bi Report](https://app.powerbi.com/view?r=eyJrIjoiMGEyMDVmMjItMTliMi00MDhmLTk2YTAtNzYyOTA5YWE3YjFjIiwidCI6IjJiNDA4NGFjLTBmMzMtNGU1YS1hYTY0LTdkYmNmN2QxMjU2ZiIsImMiOjl9)
 
 
 ### **Data Sources and Information:**
