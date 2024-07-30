@@ -7,9 +7,9 @@ In this Power BI project, I follow 9 proven business analysis or intelligence pr
 
 
 ### **Dashboard Links:**
-The initial report was published to my personal power bi workspace and available on request, however, a copy of the dashboard (.pbix) is included in the project repository. You can request access to the report via:
+View the initial report via the link below:
 
-[https://app.powerbi.com/groups/me/reports/789d1154-8dd7-4307-b6b3-84e6251ed2f3/ReportSection?experience=power-bi]()
+[https://app.powerbi.com/view?r=eyJrIjoiMGEyMDVmMjItMTliMi00MDhmLTk2YTAtNzYyOTA5YWE3YjFjIiwidCI6IjJiNDA4NGFjLTBmMzMtNGU1YS1hYTY0LTdkYmNmN2QxMjU2ZiIsImMiOjl9]()
 
 
 ### **Data Sources and Information:**
